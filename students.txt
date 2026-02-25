@@ -1,0 +1,3 @@
+Undergraduate|Alice|alice@email.com|U123|3.7|Computer Science
+Graduate|Bob|bob@email.com|G456|3.9|Data Science
+Undergraduate|angelo|angelo@gmail.com|1342|4.0|IT

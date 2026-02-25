@@ -1,0 +1,2 @@
+Dr. Smith|smith@email.com|I789|Computer Science
+Prof. Lee|lee@email.com|I101|Data Science

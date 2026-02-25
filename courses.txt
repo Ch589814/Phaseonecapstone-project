@@ -1,0 +1,2 @@
+CS101|Intro to CS|3|I789|Computer Science
+DS201|Data Science Fundamentals|4|I101|Data Science
