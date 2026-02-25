@@ -35,9 +35,9 @@ public class Main {
             System.out.println("8. View All Courses");
             System.out.println("9. View All Instructors");
             System.out.println("10. Save Data");
-            System.out.println("12. Load Data");
-            System.out.println("13. Save and Exit");
-            System.out.println("10. Exit");
+            System.out.println("11. Load Data");
+            System.out.println("12. Save and Exit");
+            System.out.println("13. Exit");
             System.out.print("Choose an option: ");
 
             int choice = scanner.nextInt();
