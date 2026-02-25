@@ -57,14 +57,15 @@ public class Main {
                 }
                 case 8 -> manager.getCourses().forEach(Main::displayCourse);
                 case 9 -> manager.getInstructors().forEach(Main::displayInstructor);
-                case 10 -> {
+                
+                 case 10 -> FileManager.saveData(manager);
+                case 11 -> FileManager.loadData(manager);
+                case 12 -> {
+                    FileManager.saveData(manager);
                     System.out.println("Goodbye!");
                     return;
                 }
-                case 11 -> FileManager.saveData(manager);
-                case 12 -> FileManager.loadData(manager);
-                case 13 -> {
-                    FileManager.saveData(manager);
+                    case 13 -> {
                     System.out.println("Goodbye!");
                     return;
                 }
