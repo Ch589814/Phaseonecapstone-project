@@ -4,6 +4,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         UniversityManager manager = new UniversityManager();
+        FileManager.saveData(manager);
         Scanner scanner = new Scanner(System.in);
         UndergraduateStudent undergrad = new UndergraduateStudent("Alice", "alice@email.com", "U123", 3.7, "Computer Science");
         GraduateStudent grad = new GraduateStudent("Bob", "bob@email.com", "G456", 3.9, "Data Science");
@@ -17,7 +18,6 @@ public class Main {
         //test universitymanager
         manager.addInstructor(inst1);
         manager.addInstructor(inst2);
-
         manager.addCourse(c1);
         manager.addCourse(c2);
         manager.addStudent(undergrad);
@@ -34,7 +34,10 @@ public class Main {
             System.out.println("7. View Students by Department");
             System.out.println("8. View All Courses");
             System.out.println("9. View All Instructors");
-            System.out.println("10. Exit");
+            System.out.println("10. Save Data");
+            System.out.println("11. Load Data");
+            System.out.println("12. Save and Exit");
+            System.out.println("12. Exit");
             System.out.print("Choose an option: ");
 
             int choice = scanner.nextInt();
@@ -55,6 +58,13 @@ public class Main {
                 case 8 -> manager.getCourses().forEach(Main::displayCourse);
                 case 9 -> manager.getInstructors().forEach(Main::displayInstructor);
                 case 10 -> {
+                    System.out.println("Goodbye!");
+                    return;
+                }
+                case 11 -> FileManager.saveData(manager);
+                case 12 -> FileManager.loadData(manager);
+                case 13 -> {
+                    FileManager.saveData(manager);
                     System.out.println("Goodbye!");
                     return;
                 }
@@ -104,7 +114,7 @@ public class Main {
         System.out.print("Code: "); String code = scanner.nextLine();
         System.out.print("Title: "); String title = scanner.nextLine();
         System.out.print("Credits: "); int credits = scanner.nextInt();
-        scanner.nextLine();
+        scanner.nextLine(); // consume newline
 
         // Show available instructors
         List<Instructor> instructors = manager.getInstructors();
